@@ -1,0 +1,238 @@
+
+/* -------------------------------- ALL ---------------------------------- */
+
+button {
+    background-color: #E63946;
+    color: #a8dadc;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #A8DADC;
+    color: #E63946;
+}
+
+body {
+    background-color: #F1FAEE;
+    color: #1D3557;
+    font-family: sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+#root {
+    height: 100%;
+}
+
+img {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* -------------------------------- HOME ---------------------------------- */
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.container, .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.login {
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* -------------------------------- SPLASH ---------------------------------- */
+
+.splash {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.splash-container {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    margin-top: 0;
+    flex: 1;
+}
+
+.channels, .channel, .replies {
+    flex: 1;
+}
+
+.channels {
+    max-width: 25%;
+    border: 1px solid #1D3557;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px #457B9D;
+}
+
+.channel, .replies {
+    border: 1px solid #1D3557;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px #457B9D;
+}
+
+.channels-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.create-channel, .create-message, .create-reply {
+    display: flex;
+    gap: 10px;
+    border-top: #E63946 1px solid;
+    padding-top: 10px;
+}
+
+.return {
+    margin-top: 10px;
+}
+
+.channel-name {
+    padding: 5px;
+}
+
+.splash-buttons {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    flex: 0;
+    padding: 10px;
+}
+
+.author {
+    
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.emoji-container {
+    display: flex;
+    gap: 10px;
+}
+
+.focus {
+    background-color: #A8DADC;
+    border-radius: 5px;
+}
+
+.secondary:hover {
+    font-weight: bold;
+    font-style: italic;
+    color: #457B9D;
+}
+
+.message-container {
+    border-top: #E63946 1px solid;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 8px;
+}
+
+/* -------------------------------- PROFILE ---------------------------------- */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+
+.happy-hide {
+    display: none;
+}
+
+.sad-hide {
+    display: none;
+}
+
+.heart-hide {
+    display: none;
+}
+
+.happy-hide, .sad-hide, .heart-hide {
+    padding-top: 5px;
+}
+
+
+.happy:hover ~ .happy-hide {
+    display: block;
+}
+
+.happy:hover ~ .happy-hide ~ .happy-hide{
+    display: none;
+}
+
+.sad:hover ~ .sad-hide {
+    display: block;
+}
+
+.sad:hover ~ .sad-hide ~ .sad-hide {
+    display: none;
+}
+
+.heart:hover ~ .heart-hide {
+    display: block;
+}
+
+.heart:hover ~ .heart-hide ~ .heart-hide {
+    display: none;
+}
+
+/* -------------------------------- MOBILE ---------------------------------- */
+
+@media (max-width: 768px) {
+    .splash-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .channels, .channel, .replies {
+        grid-column: 1;
+        grid-row: 1;
+        background-color: #F1FAEE;
+    }
+    .channels {
+        max-width: 100%;
+    }
+    .four {
+        z-index: 4;
+    }
+    .three {
+        z-index: 3;
+    }
+    .two {
+        z-index: 2;
+    }
+    .one {
+        z-index: 1;
+    }
+  }
